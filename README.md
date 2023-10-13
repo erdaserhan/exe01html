@@ -7,12 +7,17 @@ Dans la consol, initialisation du dépot :
 ```bash
 git init
 ```
+
+Ceci crée un dossier caché nommé `.git` qui contient tout l'historique du projet 
+
 ## Visualisation de l'etat de GIT
 
 ```bash
 git status
 ```
 ## Pour voir les fichiers et dossiers Unix
+
+le -a permet d'afficher les fichiers cachés
 
 ```bash
 ls -a
@@ -31,7 +36,7 @@ git add README.md
 ```
 ## Pour effectuer la sauvegarde
 
-Les fichiers en attentes de sauvegarde sont en vert
+Les fichiers en attentes de sauvegarde sont en vert, **new file** ou **modified**
 
 Les fichiers non suivi sont en rouge.
 
@@ -50,6 +55,14 @@ avec un `git log` (affichage des identifiants de sauvegardes et `git show` ( san
 ```bash
 git add .
 ```
+
+## Pour retirer un fichier du staging
+
+```bash
+git restore --staged README.md
+```
+
+Le fichier est sorti du `staging` et sera affiché en rouge avec `git status`
 
 ## Ajout d'un serveur 
 
