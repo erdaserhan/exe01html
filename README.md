@@ -29,18 +29,13 @@ ls -a
 git add README.md
 ```
 
-## Pour ajouter un fichier à la future sauvegarde
-
-```bash
-git add README.md
-```
 ## Pour effectuer la sauvegarde
 
 Les fichiers en attentes de sauvegarde sont en vert, **new file** ou **modified**
 
 Les fichiers non suivi sont en rouge.
 
-Seul les fichiers en **staging** seront sauvés
+Seul les fichiers en **staging** seront sauvegardés
 
 ```bash
 git commit -m"Message du commit"
@@ -84,3 +79,36 @@ Pour voir si ca a fonctionné :
 ```bash
 git remote -v
 ```
+
+## Envois du projet
+
+```bash
+git push origin main
+```
+
+## Récupération du projet
+
+Si on souhaite récupérer que le `.git` (donc l'historique sans les fichiers)
+
+```bash
+git fetch origin main
+```
+
+Si on souhaite récupérer toute la branche `main`
+
+```bash
+git pull origin main
+```
+
+Si on a effectué des modifications en local non voulues ne permettant pas 
+la récupération des fichiers (`merge error`).
+
+On peut utiliser un `git stash` pour faire une pseudo sauvegarde et revenir au dernier commit
+avant de refaire un `git pull`
+
+
+
+
+
+
+
